@@ -1,0 +1,46 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>静态DOM元素</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #box
+        {
+            width:100px;
+            height:100px;
+            background-color:hotpink;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById("btn");
+            var oBox = document.getElementById("box");
+            var oClBt = document.getElementById("colora");
+
+            oBtn.onclick = function () {
+                //获取文本框的值（也就是输入的内容）
+                var txt = document.getElementById("txt").value;
+                oBox.style.cssText = txt;
+	document.getElementById("txt").value = ""
+            };
+            oClBt.onclick = function () {
+                //获取文本框的值（也就是输入的内容）
+                var txt = "background-color:"+document.getElementById("color").value;
+                oBox.style.cssText = txt;
+	document.getElementById("color").value = ""
+            };
+        }
+    </script>
+</head>
+<body>
+    CSS&nbsp;&nbsp;属&nbsp;&nbsp;性<input id="txt" type="text"/>
+    <input id="btn" type="button" value="设置" />
+    <div id="box"></div>
+    颜&nbsp;&nbsp;色（&nbsp;英&nbsp;&nbsp;文&nbsp;）<input id="color" type="text"/><input id="colora" type="button" value="设置颜色" />
+&euro;<br/>
+
+</body>
+</html>
