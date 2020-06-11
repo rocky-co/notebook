@@ -3,7 +3,7 @@ function numToSimp(n){
     var str = "";
     var units=parseInt(n%10);
     var tens=parseInt(n/10);
-    var trans="零一二三四五六七八九十";
+    var trans="日一二三四五六七八九十";
 
 
 
@@ -29,7 +29,7 @@ function numToTrad(n){
     var str = "";
     var units=parseInt(n%10);
     var tens=parseInt(n/10);
-    var trans="零一二三四五六七八九";
+    var trans="日一二三四五六七八九";
     if(tens>1){
         str=trans.charAt(tens);
     }
@@ -54,7 +54,7 @@ function numToEng(n){
     var units=parseInt(n%10);
     var tens=parseInt(n/10);
     var trans=[
-        ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine","ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
+        ["Sun", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine","ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
         ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"],
     ];
     if(n<20)
